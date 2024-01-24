@@ -82,6 +82,9 @@
                                         <rect key="frame" x="0.0" y="692.5" width="414" height="115.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Calcular"/>
+                                        <connections>
+                                            <segue destination="9PK-KT-7HB" kind="show" id="Jwh-ms-zpO"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -100,6 +103,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LIS-km-rH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="817" y="68"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iYS-zY-Oy5">
+            <objects>
+                <viewController id="9PK-KT-7HB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Djh-oe-IZi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XsG-Ls-dii">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor inicial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGm-se-2UZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="161.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j66-9a-P6i">
+                                        <rect key="frame" x="0.0" y="161.5" width="414" height="161.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor Bruto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6x-48-bae">
+                                        <rect key="frame" x="0.0" y="323" width="414" height="162"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lK-Zu-65W">
+                                        <rect key="frame" x="0.0" y="485" width="414" height="161.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIB-uv-fFn">
+                                        <rect key="frame" x="0.0" y="646.5" width="414" height="161.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Nova Simulacao"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ogy-E6-tyM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ogy-E6-tyM" firstAttribute="trailing" secondItem="XsG-Ls-dii" secondAttribute="trailing" id="0dT-93-d6F"/>
+                            <constraint firstItem="XsG-Ls-dii" firstAttribute="top" secondItem="ogy-E6-tyM" secondAttribute="top" id="860-tx-0dJ"/>
+                            <constraint firstItem="XsG-Ls-dii" firstAttribute="leading" secondItem="ogy-E6-tyM" secondAttribute="leading" id="GSY-SI-AkX"/>
+                            <constraint firstItem="ogy-E6-tyM" firstAttribute="bottom" secondItem="XsG-Ls-dii" secondAttribute="bottom" id="QZQ-om-IjL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rhl-wo-YCv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ne8-zU-HDl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1762" y="68"/>
         </scene>
     </scenes>
     <resources>
