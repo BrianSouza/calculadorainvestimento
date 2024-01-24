@@ -56,15 +56,39 @@
 		478DE77E2B609A2A000544C9 /* calculadorarendafixa */ = {
 			isa = PBXGroup;
 			children = (
+				478DE7952B609A78000544C9 /* Controller */,
+				478DE7942B609A66000544C9 /* Model */,
+				478DE7932B609A58000544C9 /* View */,
 				478DE77F2B609A2A000544C9 /* AppDelegate.swift */,
 				478DE7812B609A2A000544C9 /* SceneDelegate.swift */,
-				478DE7832B609A2A000544C9 /* ViewController.swift */,
 				478DE7852B609A2A000544C9 /* Main.storyboard */,
 				478DE7882B609A2E000544C9 /* Assets.xcassets */,
 				478DE78A2B609A2E000544C9 /* LaunchScreen.storyboard */,
 				478DE78D2B609A2E000544C9 /* Info.plist */,
 			);
 			path = calculadorarendafixa;
+			sourceTree = "<group>";
+		};
+		478DE7932B609A58000544C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		478DE7942B609A66000544C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		478DE7952B609A78000544C9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				478DE7832B609A2A000544C9 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
