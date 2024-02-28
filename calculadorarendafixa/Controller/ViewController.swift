@@ -9,6 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+   
+    @IBAction func prepareForUnwind(segue: UIStoryboard)
+    {
+        self.navigationController?.popToRootViewController(animated: false)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
