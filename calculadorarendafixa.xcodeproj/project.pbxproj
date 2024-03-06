@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4761A6E02B857D6400F9EFC2 /* SimulacaoInvestimento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4761A6DF2B857D6400F9EFC2 /* SimulacaoInvestimento.swift */; };
 		4761A6E32B85879800F9EFC2 /* Erros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4761A6E22B85879800F9EFC2 /* Erros.swift */; };
+		476E5EF72B97F95A004A8DC7 /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476E5EF62B97F95A004A8DC7 /* CircularButton.swift */; };
 		478644062B730A8E00548B4A /* CalculoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478644052B730A8D00548B4A /* CalculoViewController.swift */; };
 		478644082B730C1200548B4A /* HttpHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478644072B730C1200548B4A /* HttpHelper.swift */; };
 		4786440A2B730E8400548B4A /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478644092B730E8400548B4A /* ResponseData.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		4761A6DF2B857D6400F9EFC2 /* SimulacaoInvestimento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulacaoInvestimento.swift; sourceTree = "<group>"; };
 		4761A6E22B85879800F9EFC2 /* Erros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Erros.swift; sourceTree = "<group>"; };
+		476E5EF62B97F95A004A8DC7 /* CircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
 		478644052B730A8D00548B4A /* CalculoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculoViewController.swift; sourceTree = "<group>"; };
 		478644072B730C1200548B4A /* HttpHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpHelper.swift; sourceTree = "<group>"; };
 		478644092B730E8400548B4A /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
@@ -59,6 +61,14 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		476E5EF52B97F917004A8DC7 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				476E5EF62B97F95A004A8DC7 /* CircularButton.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
 		478DE7732B609A2A000544C9 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +88,7 @@
 		478DE77E2B609A2A000544C9 /* calculadorarendafixa */ = {
 			isa = PBXGroup;
 			children = (
+				476E5EF52B97F917004A8DC7 /* Controls */,
 				4761A6E12B85877500F9EFC2 /* Enums */,
 				478DE7952B609A78000544C9 /* Controller */,
 				478DE7942B609A66000544C9 /* Model */,
@@ -199,6 +210,7 @@
 				478644062B730A8E00548B4A /* CalculoViewController.swift in Sources */,
 				478DE7822B609A2A000544C9 /* SceneDelegate.swift in Sources */,
 				47865EEF2B69D4C700EF84A9 /* ResultadoController.swift in Sources */,
+				476E5EF72B97F95A004A8DC7 /* CircularButton.swift in Sources */,
 				478644082B730C1200548B4A /* HttpHelper.swift in Sources */,
 				4761A6E32B85879800F9EFC2 /* Erros.swift in Sources */,
 			);

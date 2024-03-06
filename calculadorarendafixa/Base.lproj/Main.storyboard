@@ -16,27 +16,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyN-h4-Qoo">
-                                <rect key="frame" x="175.5" y="432.5" width="63" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Iniciar"/>
-                                <connections>
-                                    <segue destination="H0b-b2-h8w" kind="show" id="bku-IE-lCi"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tud-Ve-zap">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0xc-gF-bXY" customClass="CircularButton" customModule="calculadorarendafixa" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" toolTip="Inicie sua simulação" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyN-h4-Qoo" customClass="CircularButton" customModule="calculadorarendafixa" customModuleProvider="target">
+                                                <rect key="frame" x="147" y="388" width="120" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="8xD-yD-fao"/>
+                                                    <constraint firstAttribute="height" constant="120" id="pzv-YA-Nqz"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Iniciar">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="H0b-b2-h8w" kind="show" id="bku-IE-lCi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="fyN-h4-Qoo" firstAttribute="centerY" secondItem="0xc-gF-bXY" secondAttribute="centerY" id="6PS-Px-kIP"/>
+                                            <constraint firstItem="fyN-h4-Qoo" firstAttribute="centerX" secondItem="0xc-gF-bXY" secondAttribute="centerX" id="B3Z-Wu-qzU"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="0xc-gF-bXY" secondAttribute="trailing" id="1NF-J7-WMK"/>
+                                    <constraint firstAttribute="bottom" secondItem="0xc-gF-bXY" secondAttribute="bottom" id="74J-hQ-sj5"/>
+                                    <constraint firstItem="0xc-gF-bXY" firstAttribute="top" secondItem="Tud-Ve-zap" secondAttribute="top" id="Gwr-3C-SNb"/>
+                                    <constraint firstItem="0xc-gF-bXY" firstAttribute="leading" secondItem="Tud-Ve-zap" secondAttribute="leading" id="wFs-gU-j9c"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <constraints>
-                            <constraint firstItem="fyN-h4-Qoo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bfZ-hs-Rhd"/>
-                            <constraint firstItem="fyN-h4-Qoo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fVc-fB-jSx"/>
+                            <constraint firstItem="Tud-Ve-zap" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DbO-Nt-kzK"/>
+                            <constraint firstAttribute="bottom" secondItem="Tud-Ve-zap" secondAttribute="bottom" id="SSO-gH-wXH"/>
+                            <constraint firstItem="Tud-Ve-zap" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="t58-8y-Wsl"/>
+                            <constraint firstItem="Tud-Ve-zap" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vFu-V9-qQe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="s5f-5l-0p4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="68"/>
+            <point key="canvasLocation" x="18.840579710144929" y="67.633928571428569"/>
         </scene>
         <!--Calculo View Controller-->
         <scene sceneID="Ydt-5B-QBm">
@@ -199,6 +231,12 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
