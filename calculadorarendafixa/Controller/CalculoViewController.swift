@@ -12,11 +12,12 @@ class CalculoViewController: UIViewController {
     
     var simulacaoCalculada: SimulacaoInvestimento?
     @IBOutlet weak var cdiText: UITextField!
-    @IBOutlet weak var valorInvestimentoText: UITextField!
+    @IBOutlet weak var ctInvestimento: CustomTextView!
     @IBOutlet weak var cbdText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SetLayout()
         // Do any additional setup after loading the view.
         let httpHelper = HtttpHelper()
         httpHelper.fetchDataFromAPI { result in
@@ -34,6 +35,11 @@ class CalculoViewController: UIViewController {
         }
 
     }
+    func SetLayout(){
+        ctInvestimento.setLabelText("Valor Investimento")
+        ctInvestimento.setTextFieldText("0,00")
+        ctInvestimento.setLabelTextError("teste")
+    }
     
     @IBAction func calcularENavegar(_ sender: Any) {
         
@@ -41,7 +47,7 @@ class CalculoViewController: UIViewController {
         
     }
     func calcularRendimentoBruto() throws -> SimulacaoInvestimento{
-        if let valorInvestimento = Double(valorInvestimentoText.text ?? "0") , let porcentagemCdi = Double(cdiText.text ?? "0"), let porcentagemCDB = Double(cbdText.text ?? "0"){
+        if let valorInvestimento = Double(ctInvestimento.getTextFieldText() ?? "0") , let porcentagemCdi = Double(cdiText.text ?? "0"), let porcentagemCDB = Double(cbdText.text ?? "0"){
             
             let valorBrutoRendimento = (((porcentagemCDB / 100) * (porcentagemCdi / 100)) * valorInvestimento) + valorInvestimento
             
