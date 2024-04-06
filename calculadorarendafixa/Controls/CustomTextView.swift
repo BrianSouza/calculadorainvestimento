@@ -44,6 +44,7 @@ class CustomTextView: UIView {
         tfMain.frame = CGRect(x: 10, y: lblTitle.frame.maxY + 10, width: bounds.width - 20, height: 30)
         tfMain.borderStyle = .none
         
+        
         // Customiza o lblError
         lblError.frame = CGRect(x:10, y:tfMain.frame.maxY + 10, width: bounds.width - 20 , height: 15)
         lblError.textColor = UIColor.red
@@ -56,13 +57,25 @@ class CustomTextView: UIView {
         tfMain.layer.addSublayer(bottomLine)
         
         // Define bordas arredondadas para o controle
+        setBorderControll(false)
+    }
+    func hideKeyboard() {
+            tfMain.endEditing(true)
+        }
+    func setKeyboardType(_ type:UIKeyboardType){
+        tfMain.keyboardType = type
+    }
+    func setBorderControll(_ ligar:Bool){
+        if(ligar){
         layer.cornerRadius = 10
         layer.borderWidth = 1
         layer.borderColor = UIColor.lightGray.cgColor
         layer.frame.size.height = 100
-        layer.frame
+        }
+        else{
+            layer.borderWidth = 0
+        }
     }
-    
     func setLabelText(_ text:String) {
         lblTitle.text = text
     }

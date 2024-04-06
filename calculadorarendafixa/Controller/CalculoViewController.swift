@@ -11,9 +11,9 @@ import UIKit
 class CalculoViewController: UIViewController {
     
     var simulacaoCalculada: SimulacaoInvestimento?
-    @IBOutlet weak var cdiText: UITextField!
+    @IBOutlet weak var cdiText: CustomTextView!
     @IBOutlet weak var ctInvestimento: CustomTextView!
-    @IBOutlet weak var cbdText: UITextField!
+    @IBOutlet weak var cbdText: CustomTextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class CalculoViewController: UIViewController {
             switch result {
             case .success(let responseData):
                 DispatchQueue.main.async {
-                    self.cdiText.text = String(responseData.results[0].cdi)
+                    self.cdiText.setTextFieldText(String(responseData.results[0].cdi))
                        }
                 
             case .failure(let error):
@@ -37,8 +37,20 @@ class CalculoViewController: UIViewController {
     }
     func SetLayout(){
         ctInvestimento.setLabelText("Valor Investimento")
-        ctInvestimento.setTextFieldText("0,00")
+        ctInvestimento.setTextFieldText("0")
         ctInvestimento.setLabelTextError("teste")
+        ctInvestimento.setKeyboardType(.decimalPad)
+        
+        cdiText.setLabelText("Valor % CDI")
+        cdiText.setTextFieldText("0")
+        cdiText.setLabelTextError("teste")
+        cdiText.setKeyboardType(.decimalPad)
+        
+        cbdText.setLabelText("Valor % CDB")
+        cbdText.setTextFieldText("0")
+        cbdText.setLabelTextError("teste")
+        cbdText.setKeyboardType(.decimalPad)
+
     }
     
     @IBAction func calcularENavegar(_ sender: Any) {
@@ -47,7 +59,7 @@ class CalculoViewController: UIViewController {
         
     }
     func calcularRendimentoBruto() throws -> SimulacaoInvestimento{
-        if let valorInvestimento = Double(ctInvestimento.getTextFieldText() ?? "0") , let porcentagemCdi = Double(cdiText.text ?? "0"), let porcentagemCDB = Double(cbdText.text ?? "0"){
+        if let valorInvestimento = Double(ctInvestimento.getTextFieldText() ?? "0") , let porcentagemCdi = Double(cdiText.getTextFieldText() ?? "0"), let porcentagemCDB = Double(cbdText.getTextFieldText() ?? "0"){
             
             let valorBrutoRendimento = (((porcentagemCDB / 100) * (porcentagemCdi / 100)) * valorInvestimento) + valorInvestimento
             
