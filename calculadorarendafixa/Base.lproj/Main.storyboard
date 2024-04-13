@@ -104,12 +104,17 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" restorationIdentifier="ringProcess" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="HxL-30-sZx">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5qP-dZ-GVR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="HxL-30-sZx" firstAttribute="centerX" secondItem="UpW-BN-nEL" secondAttribute="centerX" id="7Lm-fo-jbT"/>
                             <constraint firstItem="hcQ-m7-9jB" firstAttribute="leading" secondItem="5qP-dZ-GVR" secondAttribute="leading" constant="20" id="906-Ax-vhJ"/>
                             <constraint firstItem="5qP-dZ-GVR" firstAttribute="trailing" secondItem="hcQ-m7-9jB" secondAttribute="trailing" constant="20" id="MO0-1L-Rjc"/>
+                            <constraint firstItem="HxL-30-sZx" firstAttribute="centerY" secondItem="UpW-BN-nEL" secondAttribute="centerY" id="lOm-TY-0gA"/>
                             <constraint firstItem="hcQ-m7-9jB" firstAttribute="top" secondItem="5qP-dZ-GVR" secondAttribute="top" id="qc9-CJ-hyS"/>
                             <constraint firstItem="hcQ-m7-9jB" firstAttribute="bottom" secondItem="5qP-dZ-GVR" secondAttribute="bottom" id="s10-w8-ie8"/>
                         </constraints>
@@ -119,6 +124,7 @@
                         <outlet property="cbdText" destination="GhE-eQ-qZv" id="SpP-LP-g5d"/>
                         <outlet property="cdiText" destination="98W-Ud-O8J" id="jOe-91-e7A"/>
                         <outlet property="ctInvestimento" destination="crs-UB-3rK" id="6qX-XS-95n"/>
+                        <outlet property="processRing" destination="HxL-30-sZx" id="Xki-YV-eon"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LIS-km-rH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

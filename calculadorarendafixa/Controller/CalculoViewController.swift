@@ -14,51 +14,75 @@ class CalculoViewController: UIViewController {
     @IBOutlet weak var cdiText: CustomTextView!
     @IBOutlet weak var ctInvestimento: CustomTextView!
     @IBOutlet weak var cbdText: CustomTextView!
+    @IBOutlet weak var processRing: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        processRing.isHidden = false
+        processRing.startAnimating()
         SetLayout()
         // Do any additional setup after loading the view.
         let httpHelper = HtttpHelper()
-        httpHelper.fetchDataFromAPI { result in
+        httpHelper.fetchDataFromAPI { [self] result in
             switch result {
             case .success(let responseData):
-                DispatchQueue.main.async {
+                DispatchQueue.main.async { [self] in
                     self.cdiText.setTextFieldText(String(responseData.results[0].cdi))
-                       }
+                    processRing.stopAnimating()
+                    processRing.isHidden = true
+                }
                 
             case .failure(let error):
                 // Trate o erro adequadamente
                 print("Erro ao buscar dados da API: \(error)")
+                processRing.stopAnimating()
+                processRing.isHidden = true
             }
-        
+            
         }
 
     }
     func SetLayout(){
         ctInvestimento.setLabelText("Valor Investimento")
-        ctInvestimento.setTextFieldText("0")
-        ctInvestimento.setLabelTextError("teste")
         ctInvestimento.setKeyboardType(.decimalPad)
         
         cdiText.setLabelText("Valor % CDI")
-        cdiText.setTextFieldText("0")
-        cdiText.setLabelTextError("teste")
         cdiText.setKeyboardType(.decimalPad)
         
         cbdText.setLabelText("Valor % CDB")
-        cbdText.setTextFieldText("0")
-        cbdText.setLabelTextError("teste")
         cbdText.setKeyboardType(.decimalPad)
 
     }
     
     @IBAction func calcularENavegar(_ sender: Any) {
         
-            simulacaoCalculada = try? calcularRendimentoBruto()
-        
+        if ValidarCampos(){
+        simulacaoCalculada = try? calcularRendimentoBruto()
+        }
+    }
+    func ValidarCampos() -> Bool{
+        if let txtInvestimento = Double(ctInvestimento.getTextFieldText() ?? "0"){
+            if txtInvestimento == 0{
+                ctInvestimento.setLabelText("Informe um número maior do que zero")
+                return false
+            }
+        }
+        if let txtCDI = Double(cdiText.getTextFieldText() ?? "0"){
+            if txtCDI == 0{
+                cdiText.setLabelText("Informe um número maior do que zero")
+                return false
+            }
+        }
+        if let txtCBD = Double(cdiText.getTextFieldText() ?? "0"){
+            if txtCBD == 0{
+                cbdText.setLabelText("Informe um número maior do que zero")
+                return false
+            }
+        }
+        return true
     }
     func calcularRendimentoBruto() throws -> SimulacaoInvestimento{
+        
         if let valorInvestimento = Double(ctInvestimento.getTextFieldText() ?? "0") , let porcentagemCdi = Double(cdiText.getTextFieldText() ?? "0"), let porcentagemCDB = Double(cbdText.getTextFieldText() ?? "0"){
             
             let valorBrutoRendimento = (((porcentagemCDB / 100) * (porcentagemCdi / 100)) * valorInvestimento) + valorInvestimento

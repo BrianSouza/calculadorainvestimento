@@ -11,17 +11,28 @@ class CustomTextView: UIView {
     let lblTitle = UILabel()
     let tfMain = UITextField()
     let lblError = UILabel()
+    var isDecimal: Bool = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
+        setupDecimal()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupUI()
+        setupDecimal()
     }
-    
+    private func setupDecimal(){
+        
+        // Definindo o texto inicial como "0.00"
+        tfMain.text = "0.00"
+                
+        // Adicionando um target para monitorar as mudanças de texto
+        tfMain.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
+    }
     private func setupUI() {
         // Adiciona a titulo
         addSubview(lblTitle)
@@ -55,13 +66,11 @@ class CustomTextView: UIView {
         bottomLine.frame = CGRect(x: 0.0, y: tfMain.frame.height - 1, width: tfMain.frame.width, height: 1.0)
         bottomLine.backgroundColor = UIColor.black.cgColor // Cor da linha
         tfMain.layer.addSublayer(bottomLine)
+        tfMain.endEditing(true)
         
         // Define bordas arredondadas para o controle
         setBorderControll(false)
     }
-    func hideKeyboard() {
-            tfMain.endEditing(true)
-        }
     func setKeyboardType(_ type:UIKeyboardType){
         tfMain.keyboardType = type
     }
@@ -87,6 +96,9 @@ class CustomTextView: UIView {
             return ""
         }
     }
+    func setTextFieldPlaceHolder(_ text:String){
+        tfMain.placeholder = text
+    }
     func setTextFieldText(_ text:String){
         tfMain.text = text
     }
@@ -108,6 +120,26 @@ class CustomTextView: UIView {
     }
     func setLabelTextError(_ text:String){
         lblError.text = text
+    }
+    @objc private func textFieldDidChange(_ textField: UITextField) {
+        
+            // Garantindo que o texto seja formatado corretamente
+            
+            guard var text = textField.text, !text.isEmpty else {
+                // Se o texto estiver vazio, definimos como "0.00"
+                textField.text = "0.00"
+                return
+            }
+        // Removendo caracteres não numéricos e o ponto decimal, caso já exista
+                text = text.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
+                text = text.replacingOccurrences(of: "\\.", with: "", options: .regularExpression)
+                
+                // Formatando o texto adequadamente
+                let decimalValue = Double(text) ?? 0.0
+                let formattedText = String(format: "%.2f", decimalValue / 100)
+                
+                // Definindo o texto formatado no campo
+                textField.text = formattedText
     }
 }
 
