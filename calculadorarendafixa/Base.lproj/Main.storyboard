@@ -19,39 +19,27 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tud-Ve-zap">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0xc-gF-bXY" customClass="CircularButton" customModule="calculadorarendafixa" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                        <subviews>
-                                            <button toolTip="Inicie sua simulação" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyN-h4-Qoo" customClass="CircularButton" customModule="calculadorarendafixa" customModuleProvider="target">
-                                                <rect key="frame" x="147" y="388" width="120" height="120"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="120" id="8xD-yD-fao"/>
-                                                    <constraint firstAttribute="height" constant="120" id="pzv-YA-Nqz"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Iniciar">
-                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="H0b-b2-h8w" kind="show" id="bku-IE-lCi"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <button toolTip="Inicie sua simulação" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyN-h4-Qoo" customClass="CircularButton" customModule="calculadorarendafixa" customModuleProvider="target">
+                                        <rect key="frame" x="294" y="776" width="80" height="80"/>
                                         <constraints>
-                                            <constraint firstItem="fyN-h4-Qoo" firstAttribute="centerY" secondItem="0xc-gF-bXY" secondAttribute="centerY" id="6PS-Px-kIP"/>
-                                            <constraint firstItem="fyN-h4-Qoo" firstAttribute="centerX" secondItem="0xc-gF-bXY" secondAttribute="centerX" id="B3Z-Wu-qzU"/>
+                                            <constraint firstAttribute="width" constant="80" id="8xD-yD-fao"/>
+                                            <constraint firstAttribute="height" constant="80" id="pzv-YA-Nqz"/>
                                         </constraints>
-                                    </view>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Iniciar">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="H0b-b2-h8w" kind="show" id="bku-IE-lCi"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="0xc-gF-bXY" secondAttribute="trailing" id="1NF-J7-WMK"/>
-                                    <constraint firstAttribute="bottom" secondItem="0xc-gF-bXY" secondAttribute="bottom" id="74J-hQ-sj5"/>
-                                    <constraint firstItem="0xc-gF-bXY" firstAttribute="top" secondItem="Tud-Ve-zap" secondAttribute="top" id="Gwr-3C-SNb"/>
-                                    <constraint firstItem="0xc-gF-bXY" firstAttribute="leading" secondItem="Tud-Ve-zap" secondAttribute="leading" id="wFs-gU-j9c"/>
+                                    <constraint firstAttribute="trailing" secondItem="fyN-h4-Qoo" secondAttribute="trailing" constant="40" id="Q6T-z8-AhA"/>
+                                    <constraint firstAttribute="bottom" secondItem="fyN-h4-Qoo" secondAttribute="bottom" constant="40" id="ZHH-VS-cyG"/>
                                 </constraints>
                             </view>
                         </subviews>

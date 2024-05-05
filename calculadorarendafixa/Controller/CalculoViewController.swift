@@ -16,6 +16,8 @@ class CalculoViewController: UIViewController {
     @IBOutlet weak var cbdText: CustomTextView!
     @IBOutlet weak var processRing: UIActivityIndicatorView!
     
+    var CamposValidados: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         processRing.isHidden = false
@@ -55,31 +57,46 @@ class CalculoViewController: UIViewController {
     }
     
     @IBAction func calcularENavegar(_ sender: Any) {
-        
-        if ValidarCampos(){
+        ValidarCampos()
+        if CamposValidados{
         simulacaoCalculada = try? calcularRendimentoBruto()
         }
     }
-    func ValidarCampos() -> Bool{
+    func ValidarCampos(){
+        CamposValidados = true
         if let txtInvestimento = Double(ctInvestimento.getTextFieldText() ?? "0"){
             if txtInvestimento == 0{
-                ctInvestimento.setLabelText("Informe um número maior do que zero")
-                return false
+                ctInvestimento.setLabelTextError("Informe um número maior do que zero")
+                CamposValidados = false
+                return
             }
+        }
+        else{
+            ctInvestimento.setLabelTextError("")
         }
         if let txtCDI = Double(cdiText.getTextFieldText() ?? "0"){
             if txtCDI == 0{
-                cdiText.setLabelText("Informe um número maior do que zero")
-                return false
+                cdiText.setLabelTextError("Informe um número maior do que zero")
+                CamposValidados = false
+                return
             }
         }
-        if let txtCBD = Double(cdiText.getTextFieldText() ?? "0"){
+        else{
+            cdiText.setLabelTextError("")
+        }
+        if let txtCBD = Double(cbdText.getTextFieldText() ?? "0"){
             if txtCBD == 0{
-                cbdText.setLabelText("Informe um número maior do que zero")
-                return false
+                cbdText.setLabelTextError("Informe um número maior do que zero")
+                CamposValidados = false
+                return
             }
         }
-        return true
+        else{
+            cbdText.setLabelTextError("")
+        }
+        
+        CamposValidados = true
+        
     }
     func calcularRendimentoBruto() throws -> SimulacaoInvestimento{
         
@@ -95,16 +112,19 @@ class CalculoViewController: UIViewController {
             throw Erros.erroDeCalculo
         }
     }
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "segueMostraCalculo"{
+            return CamposValidados
+        }
+        return true;
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueMostraCalculo"
         {
             if let mostraCalculoController = segue.destination as? ResultadoController{
                 
-                if  simulacaoCalculada != nil{
+                if  simulacaoCalculada != nil, CamposValidados{
                     mostraCalculoController.simulacaoParaExibir = simulacaoCalculada
-                }
-                else{
-                    segue.destination.dismiss(animated: true, completion: nil)
                 }
             }
         }
