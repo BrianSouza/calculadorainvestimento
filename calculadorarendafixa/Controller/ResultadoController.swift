@@ -12,8 +12,10 @@ class ResultadoController: UIViewController {
 
     var simulacaoParaExibir: SimulacaoInvestimento!
     
-    @IBOutlet weak var txtValorBruto: UILabel!
-    @IBOutlet weak var txtValorInicial: UILabel!
+    @IBOutlet weak var txtValorBruto: CustomTextView!
+    @IBOutlet weak var txtPercCDB: CustomTextView!
+    @IBOutlet weak var txtPercDCI: CustomTextView!
+    @IBOutlet weak var txtValorInvestido: CustomTextView!
     @IBAction func reiniciarCalculo(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
     }
@@ -21,9 +23,21 @@ class ResultadoController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        txtValorBruto.text = "R$ \(simulacaoParaExibir.ValorRendimentoBruto)"
+        txtValorInvestido.setLabelText("Seu aporte inicial da simulação foi de:")
+        txtValorInvestido.setTextFieldText("R$ \(simulacaoParaExibir.ValorInvestido)")
+        txtValorInvestido.EnableTextFieldText(false)
         
-        txtValorInicial.text = "R$ \(simulacaoParaExibir.ValorInvestido)"
+        txtPercDCI.setLabelText("Com a taxa de CDI de:")
+        txtPercDCI.setTextFieldText(" \(simulacaoParaExibir.PercCdi)%")
+        txtPercDCI.EnableTextFieldText(false)
+        
+        txtPercCDB.setLabelText("e porcentagem de CDB de:")
+        txtPercCDB.setTextFieldText(" \(simulacaoParaExibir.PercCdb)%")
+        txtPercCDB.EnableTextFieldText(false)
+        
+        txtValorBruto.setLabelText("Seu rendimento BRUTO será de:")
+        txtValorBruto.setTextFieldText("R$ \(simulacaoParaExibir.ValorRendimentoBruto)")
+        txtValorBruto.EnableTextFieldText(false)
     }
 
 

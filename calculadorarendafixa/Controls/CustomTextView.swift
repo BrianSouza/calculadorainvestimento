@@ -99,6 +99,9 @@ class CustomTextView: UIView {
     func setTextFieldPlaceHolder(_ text:String){
         tfMain.placeholder = text
     }
+    func EnableTextFieldText(_ isEnable:Bool){
+        tfMain.isEnabled = isEnable
+    }
     func setTextFieldText(_ text:String){
         tfMain.text = text
     }

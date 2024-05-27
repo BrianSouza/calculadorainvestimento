@@ -18,32 +18,21 @@ class CalculoViewController: UIViewController {
     
     var CamposValidados: Bool = false
     
+    private var _cdiService: CDIProtocol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        _cdiService = CDIService()
         processRing.isHidden = false
         processRing.startAnimating()
         SetLayout()
-        // Do any additional setup after loading the view.
-        let httpHelper = HtttpHelper()
-        httpHelper.fetchDataFromAPI { [self] result in
-            switch result {
-            case .success(let responseData):
-                DispatchQueue.main.async { [self] in
-                    self.cdiText.setTextFieldText(String(responseData.results[0].cdi))
-                    processRing.stopAnimating()
-                    processRing.isHidden = true
-                }
-                
-            case .failure(let error):
-                // Trate o erro adequadamente
-                print("Erro ao buscar dados da API: \(error)")
-                processRing.stopAnimating()
-                processRing.isHidden = true
+        let resultSearchApiCDI = _cdiService.GetCDIFromAPI()
+        cdiText.setTextFieldText(String(resultSearchApiCDI))
+        processRing.stopAnimating()
+        processRing.isHidden = true
             }
             
-        }
-
-    }
+        
     func SetLayout(){
         ctInvestimento.setLabelText("Valor Investimento")
         ctInvestimento.setKeyboardType(.decimalPad)

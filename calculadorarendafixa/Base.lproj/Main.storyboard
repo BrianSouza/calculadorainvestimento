@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tlw-vt-8aW">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,95 +13,103 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="calculadorarendafixa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tud-Ve-zap">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="SYA-il-teH">
+                                <rect key="frame" x="16" y="60" width="343" height="591"/>
                                 <subviews>
-                                    <button toolTip="Inicie sua simulação" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyN-h4-Qoo" customClass="CircularButton" customModule="calculadorarendafixa" customModuleProvider="target">
-                                        <rect key="frame" x="308" y="806" width="80" height="80"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="8xD-yD-fao"/>
-                                            <constraint firstAttribute="height" constant="80" id="pzv-YA-Nqz"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Iniciar">
-                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="H0b-b2-h8w" kind="show" id="bku-IE-lCi"/>
-                                        </connections>
-                                    </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="0Lz-kZ-Osj">
-                                        <rect key="frame" x="40" y="80" width="334" height="313"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Lz-kZ-Osj">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="335"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="313" id="JFr-xN-h9G"/>
-                                            <constraint firstAttribute="width" constant="334" id="z9z-4Y-gbb"/>
-                                        </constraints>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                <integer key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="1"/>
+                                                <integer key="value" value="16"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simulador de Investimentos" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Amg-6E-J0V">
+                                        <rect key="frame" x="0.0" y="355" width="343" height="72.5"/>
+                                        <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="28"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOn-5e-jNz">
+                                        <rect key="frame" x="0.0" y="439.5" width="343" height="62.5"/>
+                                        <string key="text">Calcule o retorno de seus investimentos
+de forma rápida e eficiente e fique mais próximo de realizar seus sonhos.</string>
+                                        <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jc4-qK-fBb">
+                                        <rect key="frame" x="0.0" y="535" width="343" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="DMF-If-JFN"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="pZn-qM-h0X"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Iniciar simulação">
+                                            <fontDescription key="titleFontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="16"/>
+                                            <color key="baseBackgroundColor" red="0.1911312342" green="0.30056864020000001" blue="0.96347862480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="0Lz-kZ-Osj" firstAttribute="top" secondItem="Tud-Ve-zap" secondAttribute="top" constant="80" id="37A-am-YBH"/>
-                                    <constraint firstAttribute="trailing" secondItem="fyN-h4-Qoo" secondAttribute="trailing" constant="40" id="Q6T-z8-AhA"/>
-                                    <constraint firstAttribute="bottom" secondItem="fyN-h4-Qoo" secondAttribute="bottom" constant="40" id="ZHH-VS-cyG"/>
-                                    <constraint firstItem="0Lz-kZ-Osj" firstAttribute="leading" secondItem="Tud-Ve-zap" secondAttribute="leading" constant="40" id="d6e-4L-Iph"/>
-                                    <constraint firstAttribute="trailing" secondItem="0Lz-kZ-Osj" secondAttribute="trailing" constant="40" id="jvN-iF-t54"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Lz-kZ-Osj" secondAttribute="trailing" id="HmT-uF-BXV"/>
+                                    <constraint firstItem="0Lz-kZ-Osj" firstAttribute="leading" secondItem="SYA-il-teH" secondAttribute="leading" id="PSA-GP-Xmv"/>
+                                    <constraint firstItem="jc4-qK-fBb" firstAttribute="top" secondItem="0Lz-kZ-Osj" secondAttribute="bottom" constant="200" id="eKL-Id-aWf"/>
+                                    <constraint firstItem="Amg-6E-J0V" firstAttribute="top" secondItem="0Lz-kZ-Osj" secondAttribute="bottom" constant="20" id="fah-bx-4pA"/>
+                                    <constraint firstItem="DOn-5e-jNz" firstAttribute="top" secondItem="Amg-6E-J0V" secondAttribute="bottom" constant="12" id="ghb-hJ-sG0"/>
+                                    <constraint firstItem="0Lz-kZ-Osj" firstAttribute="top" secondItem="SYA-il-teH" secondAttribute="top" id="xGf-Vg-0El"/>
                                 </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Tud-Ve-zap" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DbO-Nt-kzK"/>
-                            <constraint firstAttribute="bottom" secondItem="Tud-Ve-zap" secondAttribute="bottom" id="SSO-gH-wXH"/>
-                            <constraint firstItem="Tud-Ve-zap" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="t58-8y-Wsl"/>
-                            <constraint firstItem="Tud-Ve-zap" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vFu-V9-qQe"/>
+                            <constraint firstAttribute="bottom" secondItem="SYA-il-teH" secondAttribute="bottom" constant="16" id="DzD-FG-Hqi"/>
+                            <constraint firstItem="SYA-il-teH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="EuW-n2-9qf"/>
+                            <constraint firstItem="SYA-il-teH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="cjE-kB-WRU"/>
+                            <constraint firstAttribute="trailing" secondItem="SYA-il-teH" secondAttribute="trailing" constant="16" id="zXC-DT-pFH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="s5f-5l-0p4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="67.633928571428569"/>
+            <point key="canvasLocation" x="18.399999999999999" y="67.241379310344826"/>
         </scene>
         <!--Calculo View Controller-->
         <scene sceneID="Ydt-5B-QBm">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="H0b-b2-h8w" customClass="CalculoViewController" customModule="calculadorarendafixa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UpW-BN-nEL">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="hcQ-m7-9jB">
-                                <rect key="frame" x="20" y="88" width="388" height="804"/>
+                                <rect key="frame" x="20" y="0.0" width="335" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" restorationIdentifier="ctInvestimento" translatesAutoresizingMaskIntoConstraints="NO" id="crs-UB-3rK" customClass="CustomTextView" customModule="calculadorarendafixa" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="388" height="187.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="153.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" restorationIdentifier="ctCDI" translatesAutoresizingMaskIntoConstraints="NO" id="98W-Ud-O8J" userLabel="CtCDI" customClass="CustomTextView" customModule="calculadorarendafixa" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="205.66666666666669" width="388" height="187.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="171.5" width="335" height="153"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" restorationIdentifier="ctCDB" translatesAutoresizingMaskIntoConstraints="NO" id="GhE-eQ-qZv" userLabel="CtCDB" customClass="CustomTextView" customModule="calculadorarendafixa" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="411" width="388" height="187.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="342.5" width="335" height="153.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8k-Yw-ngE">
-                                        <rect key="frame" x="0.0" y="616.66666666666663" width="388" height="187.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="514" width="335" height="153"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Calcular"/>
                                         <connections>
@@ -112,7 +120,7 @@
                                 </subviews>
                             </stackView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" restorationIdentifier="ringProcess" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="HxL-30-sZx">
-                                <rect key="frame" x="204" y="453" width="20" height="20"/>
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5qP-dZ-GVR"/>
@@ -143,7 +151,7 @@
             <objects>
                 <navigationController id="tlw-vt-8aW" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VOK-ut-mYJ">
-                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -159,38 +167,30 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="9PK-KT-7HB" customClass="ResultadoController" customModule="calculadorarendafixa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Djh-oe-IZi">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XsG-Ls-dii">
-                                <rect key="frame" x="20" y="88" width="408" height="804"/>
+                                <rect key="frame" x="16" y="0.0" width="359" height="667"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor inicial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGm-se-2UZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="408" height="160.66666666666666"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j66-9a-P6i">
-                                        <rect key="frame" x="0.0" y="160.66666666666666" width="408" height="160.99999999999997"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor Bruto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6x-48-bae">
-                                        <rect key="frame" x="0.0" y="321.66666666666669" width="408" height="160.66666666666669"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lK-Zu-65W">
-                                        <rect key="frame" x="0.0" y="482.33333333333337" width="408" height="161"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oen-jT-W3V" userLabel="ctvValorInvestido" customClass="CustomTextView" customModule="calculadorarendafixa" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="133.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TvQ-Gt-QEg" userLabel="ctvPercCDI" customClass="CustomTextView" customModule="calculadorarendafixa" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="133.5" width="359" height="133.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YMG-l0-sv5" userLabel="ctvPercCDB" customClass="CustomTextView" customModule="calculadorarendafixa" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="267" width="359" height="133"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAJ-fv-MlI" userLabel="ctvValorBruto" customClass="CustomTextView" customModule="calculadorarendafixa" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="400" width="359" height="133.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIB-uv-fFn">
-                                        <rect key="frame" x="0.0" y="643.33333333333337" width="408" height="160.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="533.5" width="359" height="133.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Nova Simulacao"/>
                                         <connections>
@@ -211,8 +211,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="rhl-wo-YCv"/>
                     <connections>
-                        <outlet property="txtValorBruto" destination="9lK-Zu-65W" id="I2D-Wb-lXv"/>
-                        <outlet property="txtValorInicial" destination="j66-9a-P6i" id="YbW-7k-y4b"/>
+                        <outlet property="txtPercCDB" destination="YMG-l0-sv5" id="IaX-f1-fj2"/>
+                        <outlet property="txtPercDCI" destination="TvQ-Gt-QEg" id="mBy-r9-KAk"/>
+                        <outlet property="txtValorBruto" destination="bAJ-fv-MlI" id="083-Al-yIz"/>
+                        <outlet property="txtValorInvestido" destination="Oen-jT-W3V" id="QYG-Qa-abX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ne8-zU-HDl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -221,15 +223,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image-1" width="1280" height="916"/>
+        <image name="Image" width="364" height="459"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
