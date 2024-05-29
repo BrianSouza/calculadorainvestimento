@@ -25,6 +25,7 @@
 		478DE7872B609A2A000544C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478DE7852B609A2A000544C9 /* Main.storyboard */; };
 		478DE7892B609A2E000544C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 478DE7882B609A2E000544C9 /* Assets.xcassets */; };
 		478DE78C2B609A2E000544C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478DE78A2B609A2E000544C9 /* LaunchScreen.storyboard */; };
+		47C837962C06BAE6001E2C33 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C837952C06BAE6001E2C33 /* CustomPageControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		478DE7882B609A2E000544C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		478DE78B2B609A2E000544C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		478DE78D2B609A2E000544C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47C837952C06BAE6001E2C33 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				476E5EF62B97F95A004A8DC7 /* CircularButton.swift */,
 				476254E02B9AA70F00626520 /* Frame.swift */,
 				476254E22B9AA95F00626520 /* CustomTextView.swift */,
+				47C837952C06BAE6001E2C33 /* CustomPageControl.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				478DE7822B609A2A000544C9 /* SceneDelegate.swift in Sources */,
 				47865EEF2B69D4C700EF84A9 /* ResultadoController.swift in Sources */,
 				476E5EF72B97F95A004A8DC7 /* CircularButton.swift in Sources */,
+				47C837962C06BAE6001E2C33 /* CustomPageControl.swift in Sources */,
 				4770CEB62BFA5D6B00043B04 /* CDIProtocol.swift in Sources */,
 				476254E12B9AA70F00626520 /* Frame.swift in Sources */,
 				478644082B730C1200548B4A /* HttpHelper.swift in Sources */,

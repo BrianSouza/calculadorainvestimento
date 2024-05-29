@@ -15,10 +15,12 @@ class CalculoViewController: UIViewController {
     @IBOutlet weak var ctInvestimento: CustomTextView!
     @IBOutlet weak var cbdText: CustomTextView!
     @IBOutlet weak var processRing: UIActivityIndicatorView!
+    @IBOutlet weak var pageControl: CustomPageControl!
     
     var CamposValidados: Bool = false
     
     private var _cdiService: CDIProtocol!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,9 @@ class CalculoViewController: UIViewController {
         cdiText.setTextFieldText(String(resultSearchApiCDI))
         processRing.stopAnimating()
         processRing.isHidden = true
+        
+        pageControl.numberOfPages = 2
+                pageControl.currentPage = 0
             }
             
         
