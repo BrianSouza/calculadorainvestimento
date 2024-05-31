@@ -97,35 +97,54 @@ de forma rápida e eficiente e fique mais próximo de realizar seus sonhos.</str
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="hcQ-m7-9jB">
-                                <rect key="frame" x="20" y="0.0" width="335" height="667"/>
-                                <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="xs5-Kn-04k" customClass="CustomPageControl" customModule="calculadorarendafixa" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="119"/>
-                                    </pageControl>
-                                    <view contentMode="scaleToFill" restorationIdentifier="ctInvestimento" translatesAutoresizingMaskIntoConstraints="NO" id="crs-UB-3rK" customClass="CustomTextView" customModule="calculadorarendafixa" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="137" width="335" height="119"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" restorationIdentifier="ctCDI" translatesAutoresizingMaskIntoConstraints="NO" id="98W-Ud-O8J" userLabel="CtCDI" customClass="CustomTextView" customModule="calculadorarendafixa" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="274" width="335" height="119"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" restorationIdentifier="ctCDB" translatesAutoresizingMaskIntoConstraints="NO" id="GhE-eQ-qZv" userLabel="CtCDB" customClass="CustomTextView" customModule="calculadorarendafixa" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="411" width="335" height="119"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8k-Yw-ngE">
-                                        <rect key="frame" x="0.0" y="548" width="335" height="119"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Calcular"/>
-                                        <connections>
-                                            <action selector="calcularENavegar:" destination="H0b-b2-h8w" eventType="touchUpInside" id="ZPE-bS-NJa"/>
-                                            <segue destination="9PK-KT-7HB" kind="show" identifier="segueMostraCalculo" id="Jwh-ms-zpO"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <pageControl opaque="NO" contentMode="top" contentHorizontalAlignment="center" contentVerticalAlignment="top" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="xs5-Kn-04k" customClass="CustomPageControl" customModule="calculadorarendafixa" customModuleProvider="target">
+                                <rect key="frame" x="16" y="10" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="FO5-hh-hcB"/>
+                                </constraints>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preencha os dados abaixo dos valores que deseja investir." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gil-wb-utC">
+                                <rect key="frame" x="24" y="74" width="335" height="16"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleAspectFit" restorationIdentifier="ctInvestimento" translatesAutoresizingMaskIntoConstraints="NO" id="crs-UB-3rK" customClass="CustomTextView" customModule="calculadorarendafixa" customModuleProvider="target">
+                                <rect key="frame" x="16" y="100" width="343" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="pwa-5V-8Ku"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" restorationIdentifier="ctCDI" translatesAutoresizingMaskIntoConstraints="NO" id="98W-Ud-O8J" userLabel="CtCDI" customClass="CustomTextView" customModule="calculadorarendafixa" customModuleProvider="target">
+                                <rect key="frame" x="16" y="170" width="343" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ATc-ZK-Of0"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" restorationIdentifier="ctCDB" translatesAutoresizingMaskIntoConstraints="NO" id="GhE-eQ-qZv" userLabel="CtCDB" customClass="CustomTextView" customModule="calculadorarendafixa" customModuleProvider="target">
+                                <rect key="frame" x="16" y="240" width="343" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="e2O-Ua-yQU"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8k-Yw-ngE">
+                                <rect key="frame" x="16" y="591" width="343" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="FzF-rQ-hI3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Calcular">
+                                    <fontDescription key="titleFontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="16"/>
+                                    <color key="baseBackgroundColor" red="0.1911312342" green="0.30056864020000001" blue="0.96347862480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="calcularENavegar:" destination="H0b-b2-h8w" eventType="touchUpInside" id="ZPE-bS-NJa"/>
+                                    <segue destination="9PK-KT-7HB" kind="show" identifier="segueMostraCalculo" id="Jwh-ms-zpO"/>
+                                </connections>
+                            </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" restorationIdentifier="ringProcess" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="HxL-30-sZx">
                                 <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
                             </activityIndicatorView>
@@ -133,12 +152,27 @@ de forma rápida e eficiente e fique mais próximo de realizar seus sonhos.</str
                         <viewLayoutGuide key="safeArea" id="5qP-dZ-GVR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="HxL-30-sZx" firstAttribute="centerX" secondItem="UpW-BN-nEL" secondAttribute="centerX" id="7Lm-fo-jbT"/>
-                            <constraint firstItem="hcQ-m7-9jB" firstAttribute="leading" secondItem="5qP-dZ-GVR" secondAttribute="leading" constant="20" id="906-Ax-vhJ"/>
-                            <constraint firstItem="5qP-dZ-GVR" firstAttribute="trailing" secondItem="hcQ-m7-9jB" secondAttribute="trailing" constant="20" id="MO0-1L-Rjc"/>
-                            <constraint firstItem="HxL-30-sZx" firstAttribute="centerY" secondItem="UpW-BN-nEL" secondAttribute="centerY" id="lOm-TY-0gA"/>
-                            <constraint firstItem="hcQ-m7-9jB" firstAttribute="top" secondItem="5qP-dZ-GVR" secondAttribute="top" id="qc9-CJ-hyS"/>
-                            <constraint firstItem="hcQ-m7-9jB" firstAttribute="bottom" secondItem="5qP-dZ-GVR" secondAttribute="bottom" id="s10-w8-ie8"/>
+                            <constraint firstItem="xs5-Kn-04k" firstAttribute="top" secondItem="5qP-dZ-GVR" secondAttribute="top" constant="10" id="2ej-Vi-y40"/>
+                            <constraint firstItem="crs-UB-3rK" firstAttribute="leading" secondItem="5qP-dZ-GVR" secondAttribute="leading" constant="16" id="4aH-tN-8GY"/>
+                            <constraint firstItem="5qP-dZ-GVR" firstAttribute="trailing" secondItem="Gil-wb-utC" secondAttribute="trailing" constant="16" id="8YQ-5h-SwZ"/>
+                            <constraint firstItem="GhE-eQ-qZv" firstAttribute="top" secondItem="98W-Ud-O8J" secondAttribute="bottom" constant="10" id="8mO-Gv-Ji6"/>
+                            <constraint firstItem="xs5-Kn-04k" firstAttribute="leading" secondItem="5qP-dZ-GVR" secondAttribute="leading" constant="16" id="AGr-S3-r45"/>
+                            <constraint firstItem="Gil-wb-utC" firstAttribute="top" secondItem="xs5-Kn-04k" secondAttribute="bottom" constant="24" id="FNg-Ii-rxg"/>
+                            <constraint firstItem="HxL-30-sZx" firstAttribute="centerY" secondItem="UpW-BN-nEL" secondAttribute="centerY" id="M8M-Ov-eFY"/>
+                            <constraint firstItem="HxL-30-sZx" firstAttribute="centerX" secondItem="UpW-BN-nEL" secondAttribute="centerX" id="MN6-d2-VTR"/>
+                            <constraint firstItem="5qP-dZ-GVR" firstAttribute="trailing" secondItem="crs-UB-3rK" secondAttribute="trailing" constant="16" id="Ndv-x0-agL"/>
+                            <constraint firstItem="xs5-Kn-04k" firstAttribute="trailing" secondItem="5qP-dZ-GVR" secondAttribute="trailing" constant="16" id="PYC-Zt-Ogm"/>
+                            <constraint firstAttribute="trailing" secondItem="98W-Ud-O8J" secondAttribute="trailing" constant="16" id="SHK-Xo-8eQ"/>
+                            <constraint firstItem="5qP-dZ-GVR" firstAttribute="bottom" secondItem="X8k-Yw-ngE" secondAttribute="bottom" constant="20" id="ZHt-W0-KIF"/>
+                            <constraint firstItem="GhE-eQ-qZv" firstAttribute="leading" secondItem="5qP-dZ-GVR" secondAttribute="leading" constant="16" id="d9X-K5-VKp"/>
+                            <constraint firstItem="98W-Ud-O8J" firstAttribute="top" secondItem="crs-UB-3rK" secondAttribute="bottom" constant="10" id="dGV-h0-7cK"/>
+                            <constraint firstAttribute="trailing" secondItem="GhE-eQ-qZv" secondAttribute="trailing" constant="16" id="dIn-9n-7N6"/>
+                            <constraint firstItem="crs-UB-3rK" firstAttribute="top" secondItem="Gil-wb-utC" secondAttribute="bottom" constant="10" id="eyo-iy-8H4"/>
+                            <constraint firstItem="98W-Ud-O8J" firstAttribute="leading" secondItem="5qP-dZ-GVR" secondAttribute="leading" constant="16" id="fnT-qg-BIu"/>
+                            <constraint firstItem="X8k-Yw-ngE" firstAttribute="leading" secondItem="5qP-dZ-GVR" secondAttribute="leading" constant="16" id="gY5-fN-4qp"/>
+                            <constraint firstItem="5qP-dZ-GVR" firstAttribute="trailing" secondItem="X8k-Yw-ngE" secondAttribute="trailing" constant="16" id="sCA-Na-U3L"/>
+                            <constraint firstItem="HxL-30-sZx" firstAttribute="centerY" secondItem="UpW-BN-nEL" secondAttribute="centerY" id="tJ6-4r-OHy"/>
+                            <constraint firstItem="Gil-wb-utC" firstAttribute="leading" secondItem="UpW-BN-nEL" secondAttribute="leading" constant="24" id="xdp-CF-Vsg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZOw-dW-UgH"/>
