@@ -9,8 +9,8 @@ import UIKit
 class CustomPageControl: UIControl {
 
     // Configuração dos tamanhos para os indicadores
-    let selectedIndicatorSize = CGSize(width: 20, height: 8)
-    let defaultIndicatorSize = CGSize(width: 40, height: 8)
+    let selectedIndicatorSize = CGSize(width: 20, height: 6)
+    let defaultIndicatorSize = CGSize(width: 40, height: 6)
     var indicatorColor: UIColor = .gray
     var currentPageIndicatorColor: UIColor = .blue
     var dotSpacing: CGFloat = 2.0  // Espaço entre os pontos
@@ -37,7 +37,7 @@ class CustomPageControl: UIControl {
         
         // Calcula a largura total dos pontos mais o espaçamento
         let totalWidth = CGFloat(numberOfPages) * defaultIndicatorSize.width + CGFloat(numberOfPages - 1) * dotSpacing
-        let startX = (rect.width - totalWidth) / 2
+        let startX = (rect.width - 10 - totalWidth) / 2
         let centerY = rect.height / 2
         
         for i in 0..<numberOfPages {

@@ -34,11 +34,11 @@
                                         <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="28"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOn-5e-jNz">
-                                        <rect key="frame" x="0.0" y="483.5" width="343" height="62.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOn-5e-jNz">
+                                        <rect key="frame" x="0.0" y="483.5" width="343" height="54.5"/>
                                         <string key="text">Calcule o retorno de seus investimentos
 de forma rápida e eficiente e fique mais próximo de realizar seus sonhos.</string>
-                                        <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="14"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -110,24 +110,24 @@ de forma rápida e eficiente e fique mais próximo de realizar seus sonhos.</str
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleAspectFit" restorationIdentifier="ctInvestimento" translatesAutoresizingMaskIntoConstraints="NO" id="crs-UB-3rK" customClass="CustomTextView" customModule="calculadorarendafixa" customModuleProvider="target">
-                                <rect key="frame" x="16" y="100" width="343" height="60"/>
+                                <rect key="frame" x="16" y="100" width="343" height="80"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="pwa-5V-8Ku"/>
+                                    <constraint firstAttribute="height" constant="80" id="pwa-5V-8Ku"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" restorationIdentifier="ctCDI" translatesAutoresizingMaskIntoConstraints="NO" id="98W-Ud-O8J" userLabel="CtCDI" customClass="CustomTextView" customModule="calculadorarendafixa" customModuleProvider="target">
-                                <rect key="frame" x="16" y="170" width="343" height="60"/>
+                                <rect key="frame" x="16" y="190" width="343" height="80"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="ATc-ZK-Of0"/>
+                                    <constraint firstAttribute="height" constant="80" id="ATc-ZK-Of0"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" restorationIdentifier="ctCDB" translatesAutoresizingMaskIntoConstraints="NO" id="GhE-eQ-qZv" userLabel="CtCDB" customClass="CustomTextView" customModule="calculadorarendafixa" customModuleProvider="target">
-                                <rect key="frame" x="16" y="240" width="343" height="60"/>
+                                <rect key="frame" x="16" y="280" width="343" height="80"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="e2O-Ua-yQU"/>
+                                    <constraint firstAttribute="height" constant="80" id="e2O-Ua-yQU"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8k-Yw-ngE">

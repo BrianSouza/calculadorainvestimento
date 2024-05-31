@@ -53,7 +53,8 @@ class CustomTextView: UIView {
         
         // Define os tamanhos e posições da tfMain
         tfMain.frame = CGRect(x: 10, y: lblTitle.frame.maxY + 10, width: bounds.width - 20, height: 30)
-        tfMain.borderStyle = .none
+        tfMain.borderStyle = .roundedRect
+        tfMain.font = UIFont.systemFont(ofSize: 10)
         
         
         // Customiza o lblError
@@ -61,12 +62,12 @@ class CustomTextView: UIView {
         lblError.textColor = UIColor.red
         lblError.font = UIFont.systemFont(ofSize: 8)
         
-        //Add uma linha no tfMain
+        /*//Add uma linha no tfMain
         let bottomLine = CALayer()
         bottomLine.frame = CGRect(x: 0.0, y: tfMain.frame.height - 1, width: tfMain.frame.width, height: 1.0)
         bottomLine.backgroundColor = UIColor.black.cgColor // Cor da linha
         tfMain.layer.addSublayer(bottomLine)
-        tfMain.endEditing(true)
+        tfMain.endEditing(true)*/
         
         // Define bordas arredondadas para o controle
         setBorderControll(false)
