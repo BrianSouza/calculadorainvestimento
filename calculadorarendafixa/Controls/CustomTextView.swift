@@ -56,7 +56,6 @@ class CustomTextView: UIView {
         tfMain.borderStyle = .roundedRect
         tfMain.font = UIFont.systemFont(ofSize: 10)
         
-        
         // Customiza o lblError
         lblError.frame = CGRect(x:10, y:tfMain.frame.maxY + 10, width: bounds.width - 20 , height: 15)
         lblError.textColor = UIColor.red

@@ -6,5 +6,5 @@
 //
 
 protocol CDIProtocol{
-    func GetCDIFromAPI() -> Double
+    func fetchFinanceData() async throws -> [Results]
 }

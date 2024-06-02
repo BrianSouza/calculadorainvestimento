@@ -28,8 +28,26 @@ class CalculoViewController: UIViewController {
         processRing.isHidden = false
         processRing.startAnimating()
         SetLayout()
-        let resultSearchApiCDI = _cdiService.GetCDIFromAPI()
-        cdiText.setTextFieldText(String(resultSearchApiCDI))
+        //let resultSearchApiCDI = _cdiService.GetCDIFromAPI()
+        //cdiText.setTextFieldText(String(resultSearchApiCDI))
+        Task {
+                    do {
+                        let results = try await _cdiService.fetchFinanceData()
+                        
+                        // Atualize a interface do usuário aqui, se necessário
+                        await MainActor.run {
+                            if let cdiConsultado = results.first{
+                                cdiText.setTextFieldText(String(cdiConsultado.cdiDaily))
+                            }
+                            else{
+                                cdiText.setTextFieldText("0.00");
+                            }
+                        }
+                        
+                    } catch {
+                        print("Erro ao buscar dados: \(error)")
+                    }
+                }
         processRing.stopAnimating()
         processRing.isHidden = true
         
@@ -58,43 +76,43 @@ class CalculoViewController: UIViewController {
     }
     func ValidarCampos(){
         CamposValidados = true
-        if let txtInvestimento = Double(ctInvestimento.getTextFieldText() ?? "0"){
+        if let txtInvestimento = Double(ctInvestimento.getTextFieldText() ){
             if txtInvestimento == 0{
                 ctInvestimento.setLabelTextError("Informe um número maior do que zero")
                 CamposValidados = false
                 return
             }
+            else{
+                ctInvestimento.setLabelTextError("")
+                
+            }
         }
-        else{
-            ctInvestimento.setLabelTextError("")
-        }
-        if let txtCDI = Double(cdiText.getTextFieldText() ?? "0"){
+        if let txtCDI = Double(cdiText.getTextFieldText() ){
             if txtCDI == 0{
                 cdiText.setLabelTextError("Informe um número maior do que zero")
                 CamposValidados = false
                 return
             }
+            else{
+                cdiText.setLabelTextError("")
+            }
         }
-        else{
-            cdiText.setLabelTextError("")
-        }
-        if let txtCBD = Double(cbdText.getTextFieldText() ?? "0"){
+        if let txtCBD = Double(cbdText.getTextFieldText() ){
             if txtCBD == 0{
                 cbdText.setLabelTextError("Informe um número maior do que zero")
                 CamposValidados = false
                 return
             }
+            else{
+                cbdText.setLabelTextError("")
+            }
         }
-        else{
-            cbdText.setLabelTextError("")
-        }
-        
         CamposValidados = true
         
     }
     func calcularRendimentoBruto() throws -> SimulacaoInvestimento{
         
-        if let valorInvestimento = Double(ctInvestimento.getTextFieldText() ?? "0") , let porcentagemCdi = Double(cdiText.getTextFieldText() ?? "0"), let porcentagemCDB = Double(cbdText.getTextFieldText() ?? "0"){
+        if let valorInvestimento = Double(ctInvestimento.getTextFieldText() ) , let porcentagemCdi = Double(cdiText.getTextFieldText() ), let porcentagemCDB = Double(cbdText.getTextFieldText() ){
             
             let valorBrutoRendimento = (((porcentagemCDB / 100) * (porcentagemCdi / 100)) * valorInvestimento) + valorInvestimento
             

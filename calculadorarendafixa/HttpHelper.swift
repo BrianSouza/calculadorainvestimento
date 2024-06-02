@@ -8,7 +8,8 @@
 import Foundation
 class HtttpHelper
 {
-    func fetchDataFromAPI(completion: @escaping (Result<ResponseData, Error>) -> Void) {
+    
+   /* func fetchDataFromAPI(completion: @escaping (Result<ResponseData, Error>) -> Void) {
         // Defina a URL da API que deseja acessar
         let apiUrl = URL(string: "https://api.hgbrasil.com/finance/taxes?key=319ef0b3")!
 
@@ -41,7 +42,8 @@ class HtttpHelper
         
         // Inicie a tarefa
         task.resume()
-    }
+    }*/
+    
 
 }
 
