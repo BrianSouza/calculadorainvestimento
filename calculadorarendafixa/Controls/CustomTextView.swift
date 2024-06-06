@@ -4,145 +4,142 @@
 //
 //  Created by Brian Diego De Souza on 07/03/24.
 //
-
 import UIKit
 
-class CustomTextView: UIView {
+class CustomTextView: UIView, UITextFieldDelegate {
     let lblTitle = UILabel()
     let tfMain = UITextField()
     let lblError = UILabel()
     var isDecimal: Bool = false
-    
+
+    // MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupUI()
-        setupDecimal()
+        setupView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setupView()
+    }
+    
+    // MARK: - Setup Methods
+    private func setupView() {
         setupUI()
-        setupDecimal()
+        setupTextField()
+        addDoneButtonOnKeyboard()
     }
-    private func setupDecimal(){
-        
-        // Definindo o texto inicial como "0.00"
-        tfMain.text = "0.00"
-                
-        // Adicionando um target para monitorar as mudanças de texto
-        tfMain.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-        
-    }
+
     private func setupUI() {
-        // Adiciona a titulo
         addSubview(lblTitle)
-        
-        // Adiciona o textField principal
         addSubview(tfMain)
-        
-        // adicionar o lbl de erro
         addSubview(lblError)
     }
     
+    private func setupTextField() {
+        tfMain.text = "0.00"
+        tfMain.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        tfMain.delegate = self
+    }
+
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        // Define os tamanhos e posições da lblTitle
+        layoutLabelsAndTextField()
+        setBorderControl(false)
+    }
+
+    private func layoutLabelsAndTextField() {
         lblTitle.frame = CGRect(x: 10, y: 10, width: bounds.width - 20, height: 15)
         lblTitle.font = UIFont.systemFont(ofSize: 10)
         
-        // Define os tamanhos e posições da tfMain
         tfMain.frame = CGRect(x: 10, y: lblTitle.frame.maxY + 10, width: bounds.width - 20, height: 30)
         tfMain.borderStyle = .roundedRect
         tfMain.font = UIFont.systemFont(ofSize: 10)
         
-        // Customiza o lblError
-        lblError.frame = CGRect(x:10, y:tfMain.frame.maxY + 10, width: bounds.width - 20 , height: 15)
-        lblError.textColor = UIColor.red
+        lblError.frame = CGRect(x: 10, y: tfMain.frame.maxY + 10, width: bounds.width - 20, height: 15)
+        lblError.textColor = .red
         lblError.font = UIFont.systemFont(ofSize: 8)
-        
-        /*//Add uma linha no tfMain
-        let bottomLine = CALayer()
-        bottomLine.frame = CGRect(x: 0.0, y: tfMain.frame.height - 1, width: tfMain.frame.width, height: 1.0)
-        bottomLine.backgroundColor = UIColor.black.cgColor // Cor da linha
-        tfMain.layer.addSublayer(bottomLine)
-        tfMain.endEditing(true)*/
-        
-        // Define bordas arredondadas para o controle
-        setBorderControll(false)
     }
-    func setKeyboardType(_ type:UIKeyboardType){
+
+    // MARK: - Customization Methods
+    func setKeyboardType(_ type: UIKeyboardType) {
         tfMain.keyboardType = type
     }
-    func setBorderControll(_ ligar:Bool){
-        if(ligar){
-        layer.cornerRadius = 10
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.lightGray.cgColor
-        layer.frame.size.height = 100
-        }
-        else{
+    
+    func setBorderControl(_ enable: Bool) {
+        if enable {
+            layer.cornerRadius = 10
+            layer.borderWidth = 1
+            layer.borderColor = UIColor.lightGray.cgColor
+        } else {
             layer.borderWidth = 0
         }
     }
-    func setLabelText(_ text:String) {
+
+    func setLabelText(_ text: String) {
         lblTitle.text = text
     }
-    func getLabelText() -> String{
-        if let text = lblTitle.text{
-            return text
-        }
-        else{
-            return ""
-        }
+    
+    func getLabelText() -> String {
+        return lblTitle.text ?? ""
     }
-    func setTextFieldPlaceHolder(_ text:String){
+    
+    func setTextFieldPlaceholder(_ text: String) {
         tfMain.placeholder = text
     }
-    func EnableTextFieldText(_ isEnable:Bool){
-        tfMain.isEnabled = isEnable
+    
+    func enableTextField(_ isEnabled: Bool) {
+        tfMain.isEnabled = isEnabled
     }
-    func setTextFieldText(_ text:String){
+    
+    func setTextFieldText(_ text: String) {
         tfMain.text = text
     }
-    func getTextFieldText() -> String{
-        if let text = tfMain.text{
-            return text
-        }
-        else{
-            return ""
-        }
+    
+    func getTextFieldText() -> String {
+        return tfMain.text ?? ""
     }
-    func getLabelTextError() -> String{
-        if let text = lblError.text{
-            return text
-        }
-        else{
-            return ""
-        }
-    }
-    func setLabelTextError(_ text:String){
+    
+    func setLabelTextError(_ text: String) {
         lblError.text = text
     }
+    
+    func getLabelTextError() -> String {
+        return lblError.text ?? ""
+    }
+
+    // MARK: - TextField Change Handling
     @objc private func textFieldDidChange(_ textField: UITextField) {
+        guard var text = textField.text, !text.isEmpty else {
+            textField.text = "0.00"
+            return
+        }
+
+        text = text.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
+        text = text.replacingOccurrences(of: "\\.", with: "", options: .regularExpression)
         
-            // Garantindo que o texto seja formatado corretamente
-            
-            guard var text = textField.text, !text.isEmpty else {
-                // Se o texto estiver vazio, definimos como "0.00"
-                textField.text = "0.00"
-                return
-            }
-        // Removendo caracteres não numéricos e o ponto decimal, caso já exista
-                text = text.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
-                text = text.replacingOccurrences(of: "\\.", with: "", options: .regularExpression)
-                
-                // Formatando o texto adequadamente
-                let decimalValue = Double(text) ?? 0.0
-                let formattedText = String(format: "%.2f", decimalValue / 100)
-                
-                // Definindo o texto formatado no campo
-                textField.text = formattedText
+        let decimalValue = Double(text) ?? 0.0
+        let formattedText = String(format: "%.2f", decimalValue / 100)
+        textField.text = formattedText
+    }
+
+    // MARK: - Done Button on Keyboard
+    private func addDoneButtonOnKeyboard() {
+        let doneToolbar = UIToolbar()
+        doneToolbar.sizeToFit()
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
+        
+        doneToolbar.items = [flexSpace, doneButton]
+        doneToolbar.barStyle = .default
+        
+        tfMain.inputAccessoryView = doneToolbar
+    }
+    
+    @objc private func doneButtonAction() {
+        tfMain.resignFirstResponder()
     }
 }
+
 

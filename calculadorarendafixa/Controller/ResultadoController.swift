@@ -25,19 +25,19 @@ class ResultadoController: UIViewController {
         
         txtValorInvestido.setLabelText("Seu aporte inicial da simulação foi de:")
         txtValorInvestido.setTextFieldText("R$ \(simulacaoParaExibir.ValorInvestido)")
-        txtValorInvestido.EnableTextFieldText(false)
+        txtValorInvestido.enableTextField(false)
         
         txtPercDCI.setLabelText("Com a taxa de CDI de:")
         txtPercDCI.setTextFieldText(" \(simulacaoParaExibir.PercCdi)%")
-        txtPercDCI.EnableTextFieldText(false)
+        txtPercDCI.enableTextField(false)
         
         txtPercCDB.setLabelText("e porcentagem de CDB de:")
         txtPercCDB.setTextFieldText(" \(simulacaoParaExibir.PercCdb)%")
-        txtPercCDB.EnableTextFieldText(false)
+        txtPercCDB.enableTextField(false)
         
         txtValorBruto.setLabelText("Seu rendimento BRUTO será de:")
         txtValorBruto.setTextFieldText("R$ \(simulacaoParaExibir.ValorRendimentoBruto)")
-        txtValorBruto.EnableTextFieldText(false)
+        txtValorBruto.enableTextField(false)
     }
 
 
