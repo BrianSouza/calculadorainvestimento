@@ -11,6 +11,8 @@
 		4761A6E32B85879800F9EFC2 /* Erros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4761A6E22B85879800F9EFC2 /* Erros.swift */; };
 		476254E12B9AA70F00626520 /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476254E02B9AA70F00626520 /* Frame.swift */; };
 		476254E32B9AA95F00626520 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476254E22B9AA95F00626520 /* CustomTextView.swift */; };
+		476669C12C14A584006DEEF0 /* TornPaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476669C02C14A584006DEEF0 /* TornPaperView.swift */; };
+		476669C32C1F4388006DEEF0 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476669C22C1F4387006DEEF0 /* CircleView.swift */; };
 		476E5EF72B97F95A004A8DC7 /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476E5EF62B97F95A004A8DC7 /* CircularButton.swift */; };
 		4770CEB62BFA5D6B00043B04 /* CDIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4770CEB52BFA5D6B00043B04 /* CDIProtocol.swift */; };
 		4770CEB92BFA5DE000043B04 /* CDIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4770CEB82BFA5DE000043B04 /* CDIService.swift */; };
@@ -33,6 +35,8 @@
 		4761A6E22B85879800F9EFC2 /* Erros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Erros.swift; sourceTree = "<group>"; };
 		476254E02B9AA70F00626520 /* Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
 		476254E22B9AA95F00626520 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
+		476669C02C14A584006DEEF0 /* TornPaperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TornPaperView.swift; sourceTree = "<group>"; };
+		476669C22C1F4387006DEEF0 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		476E5EF62B97F95A004A8DC7 /* CircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
 		4770CEB52BFA5D6B00043B04 /* CDIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDIProtocol.swift; sourceTree = "<group>"; };
 		4770CEB82BFA5DE000043B04 /* CDIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDIService.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 				476254E02B9AA70F00626520 /* Frame.swift */,
 				476254E22B9AA95F00626520 /* CustomTextView.swift */,
 				47C837952C06BAE6001E2C33 /* CustomPageControl.swift */,
+				476669C02C14A584006DEEF0 /* TornPaperView.swift */,
+				476669C22C1F4387006DEEF0 /* CircleView.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -233,9 +239,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				476669C32C1F4388006DEEF0 /* CircleView.swift in Sources */,
 				476254E32B9AA95F00626520 /* CustomTextView.swift in Sources */,
 				478DE7842B609A2A000544C9 /* ViewController.swift in Sources */,
 				4786440A2B730E8400548B4A /* ResponseData.swift in Sources */,
+				476669C12C14A584006DEEF0 /* TornPaperView.swift in Sources */,
 				4786440C2B730F1200548B4A /* Results.swift in Sources */,
 				478DE7802B609A2A000544C9 /* AppDelegate.swift in Sources */,
 				4770CEB92BFA5DE000043B04 /* CDIService.swift in Sources */,

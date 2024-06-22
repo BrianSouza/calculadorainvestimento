@@ -11,7 +11,8 @@ import UIKit
 class ResultadoController: UIViewController {
 
     var simulacaoParaExibir: SimulacaoInvestimento!
-    
+    @IBOutlet weak var tornPaperCardView: TornPaperCardView!
+    @IBOutlet weak var pageControl: CustomPageControl!
     @IBOutlet weak var txtValorBruto: CustomTextView!
     @IBOutlet weak var txtPercCDB: CustomTextView!
     @IBOutlet weak var txtPercDCI: CustomTextView!
@@ -22,8 +23,9 @@ class ResultadoController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        txtValorInvestido.setLabelText("Seu aporte inicial da simulação foi de:")
+        setupCardContent()
+        configureView()
+        /*txtValorInvestido.setLabelText("Seu aporte inicial da simulação foi de:")
         txtValorInvestido.setTextFieldText("R$ \(simulacaoParaExibir.ValorInvestido)")
         txtValorInvestido.enableTextField(false)
         
@@ -37,8 +39,16 @@ class ResultadoController: UIViewController {
         
         txtValorBruto.setLabelText("Seu rendimento BRUTO será de:")
         txtValorBruto.setTextFieldText("R$ \(simulacaoParaExibir.ValorRendimentoBruto)")
-        txtValorBruto.enableTextField(false)
+        txtValorBruto.enableTextField(false)*/
     }
-
+    // MARK: - Configuration Methods
+    private func configureView() {
+        
+        pageControl.numberOfPages = 2
+        pageControl.currentPage = 1
+    }
+    private func setupCardContent() {
+           
+        }
 
 }
