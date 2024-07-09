@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tlw-vt-8aW">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,125 +13,126 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="calculadorarendafixa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="SYA-il-teH">
-                                <rect key="frame" x="16" y="16" width="343" height="635"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Lz-kZ-Osj">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="379"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="16"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simulador de Investimentos" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Amg-6E-J0V">
-                                        <rect key="frame" x="0.0" y="399" width="343" height="72.5"/>
-                                        <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="28"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOn-5e-jNz">
-                                        <rect key="frame" x="0.0" y="483.5" width="343" height="54.5"/>
-                                        <string key="text">Calcule o retorno de seus investimentos
-de forma rápida e eficiente e fique mais próximo de realizar seus sonhos.</string>
-                                        <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="14"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jc4-qK-fBb">
-                                        <rect key="frame" x="0.0" y="579" width="343" height="56"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="DMF-If-JFN"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="pZn-qM-h0X"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Iniciar simulação">
-                                            <fontDescription key="titleFontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="16"/>
-                                            <color key="baseBackgroundColor" red="0.1911312342" green="0.30056864020000001" blue="0.96347862480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </buttonConfiguration>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="H0b-b2-h8w" kind="show" id="vam-M3-RCw"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Lz-kZ-Osj">
+                                <rect key="frame" x="16" y="44" width="382" height="469"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="0Lz-kZ-Osj" secondAttribute="trailing" id="HmT-uF-BXV"/>
-                                    <constraint firstItem="0Lz-kZ-Osj" firstAttribute="leading" secondItem="SYA-il-teH" secondAttribute="leading" id="PSA-GP-Xmv"/>
-                                    <constraint firstItem="jc4-qK-fBb" firstAttribute="top" secondItem="0Lz-kZ-Osj" secondAttribute="bottom" constant="200" id="eKL-Id-aWf"/>
-                                    <constraint firstItem="Amg-6E-J0V" firstAttribute="top" secondItem="0Lz-kZ-Osj" secondAttribute="bottom" constant="20" id="fah-bx-4pA"/>
-                                    <constraint firstItem="DOn-5e-jNz" firstAttribute="top" secondItem="Amg-6E-J0V" secondAttribute="bottom" constant="12" id="ghb-hJ-sG0"/>
-                                    <constraint firstItem="0Lz-kZ-Osj" firstAttribute="top" secondItem="SYA-il-teH" secondAttribute="top" id="xGf-Vg-0El"/>
+                                    <constraint firstAttribute="height" constant="469" id="tgW-tw-hM9"/>
                                 </constraints>
-                            </stackView>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simulador de Investimentos" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Amg-6E-J0V">
+                                <rect key="frame" x="16" y="655" width="382" height="36.333333333333371"/>
+                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="28"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOn-5e-jNz">
+                                <rect key="frame" x="16" y="711.33333333333337" width="382" height="54.666666666666629"/>
+                                <string key="text">Calcule o retorno de seus investimentos
+de forma rápida e eficiente e fique mais próximo de realizar seus sonhos.</string>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jc4-qK-fBb">
+                                <rect key="frame" x="16" y="786" width="382" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="wJd-6Q-vv7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Iniciar simulação">
+                                    <fontDescription key="titleFontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="16"/>
+                                    <color key="baseBackgroundColor" red="0.1911312342" green="0.30056864020000001" blue="0.96347862480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="H0b-b2-h8w" kind="show" id="vam-M3-RCw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="SYA-il-teH" secondAttribute="bottom" constant="16" id="DzD-FG-Hqi"/>
-                            <constraint firstItem="SYA-il-teH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="EuW-n2-9qf"/>
-                            <constraint firstItem="SYA-il-teH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="cjE-kB-WRU"/>
-                            <constraint firstAttribute="trailing" secondItem="SYA-il-teH" secondAttribute="trailing" constant="16" id="zXC-DT-pFH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Amg-6E-J0V" secondAttribute="trailing" constant="16" id="2e2-Ib-BRF"/>
+                            <constraint firstItem="0Lz-kZ-Osj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2kU-mJ-LG2"/>
+                            <constraint firstItem="0Lz-kZ-Osj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2uq-9m-hgB"/>
+                            <constraint firstItem="jc4-qK-fBb" firstAttribute="top" secondItem="DOn-5e-jNz" secondAttribute="bottom" constant="20" id="5t3-x3-zci"/>
+                            <constraint firstItem="DOn-5e-jNz" firstAttribute="top" secondItem="Amg-6E-J0V" secondAttribute="bottom" constant="20" id="HPq-v3-tmE"/>
+                            <constraint firstItem="Amg-6E-J0V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Mbu-Ou-7lT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DOn-5e-jNz" secondAttribute="trailing" constant="16" id="bmb-UY-jdA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jc4-qK-fBb" secondAttribute="trailing" constant="16" id="cof-Cc-Rxw"/>
+                            <constraint firstItem="DOn-5e-jNz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="h2X-6a-xZA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Lz-kZ-Osj" secondAttribute="trailing" constant="16" id="tEk-C9-t6D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jc4-qK-fBb" secondAttribute="bottom" constant="20" id="tRD-E5-DFj"/>
+                            <constraint firstItem="jc4-qK-fBb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="zcV-Or-YnL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="s5f-5l-0p4"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="lbCalcule" destination="DOn-5e-jNz" id="06U-qa-p2z"/>
+                        <outlet property="r" destination="Amg-6E-J0V" id="5cW-Xl-vrv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.399999999999999" y="67.241379310344826"/>
+            <point key="canvasLocation" x="17.39130434782609" y="66.964285714285708"/>
         </scene>
         <!--Calculo View Controller-->
         <scene sceneID="Ydt-5B-QBm">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="H0b-b2-h8w" customClass="CalculoViewController" customModule="calculadorarendafixa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UpW-BN-nEL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pageControl opaque="NO" contentMode="top" contentHorizontalAlignment="center" contentVerticalAlignment="top" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="xs5-Kn-04k" customClass="CustomPageControl" customModule="calculadorarendafixa" customModuleProvider="target">
-                                <rect key="frame" x="16" y="10" width="375" height="40"/>
+                                <rect key="frame" x="16" y="54" width="414" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="FO5-hh-hcB"/>
                                 </constraints>
                             </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preencha os dados abaixo dos valores que deseja investir." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gil-wb-utC">
-                                <rect key="frame" x="24" y="74" width="335" height="16"/>
+                                <rect key="frame" x="24" y="118" width="374" height="15.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleAspectFit" restorationIdentifier="ctInvestimento" translatesAutoresizingMaskIntoConstraints="NO" id="crs-UB-3rK" customClass="CustomTextView" customModule="calculadorarendafixa" customModuleProvider="target">
-                                <rect key="frame" x="16" y="100" width="343" height="80"/>
+                                <rect key="frame" x="16" y="143.66666666666666" width="382" height="80"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="pwa-5V-8Ku"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" restorationIdentifier="ctCDI" translatesAutoresizingMaskIntoConstraints="NO" id="98W-Ud-O8J" userLabel="CtCDI" customClass="CustomTextView" customModule="calculadorarendafixa" customModuleProvider="target">
-                                <rect key="frame" x="16" y="190" width="343" height="80"/>
+                                <rect key="frame" x="16" y="233.66666666666663" width="382" height="80"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="ATc-ZK-Of0"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" restorationIdentifier="ctCDB" translatesAutoresizingMaskIntoConstraints="NO" id="GhE-eQ-qZv" userLabel="CtCDB" customClass="CustomTextView" customModule="calculadorarendafixa" customModuleProvider="target">
-                                <rect key="frame" x="16" y="280" width="343" height="80"/>
+                                <rect key="frame" x="16" y="323.66666666666669" width="382" height="80"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="e2O-Ua-yQU"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8k-Yw-ngE">
-                                <rect key="frame" x="16" y="591" width="343" height="56"/>
+                                <rect key="frame" x="16" y="786" width="382" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="FzF-rQ-hI3"/>
                                 </constraints>
@@ -146,7 +147,7 @@ de forma rápida e eficiente e fique mais próximo de realizar seus sonhos.</str
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" restorationIdentifier="ringProcess" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="HxL-30-sZx">
-                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5qP-dZ-GVR"/>
@@ -209,62 +210,62 @@ de forma rápida e eficiente e fique mais próximo de realizar seus sonhos.</str
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="9PK-KT-7HB" customClass="ResultadoController" customModule="calculadorarendafixa" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Djh-oe-IZi" customClass="TornPaperView" customModule="calculadorarendafixa" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pageControl opaque="NO" contentMode="top" contentHorizontalAlignment="center" contentVerticalAlignment="top" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="0iF-Se-SCp" customClass="CustomPageControl" customModule="calculadorarendafixa" customModuleProvider="target">
-                                <rect key="frame" x="16" y="0.0" width="375" height="40"/>
+                                <rect key="frame" x="16" y="44" width="414" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="bZj-Ro-Yx9"/>
                                 </constraints>
                             </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PkV-UU-HLO" customClass="TornPaperCardView" customModule="calculadorarendafixa" customModuleProvider="target">
-                                <rect key="frame" x="16" y="100" width="343" height="441"/>
+                                <rect key="frame" x="16" y="144" width="382" height="350"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seu rendimento BRUTO será de:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTa-C3-uoO">
-                                        <rect key="frame" x="50" y="35" width="243" height="21"/>
+                                        <rect key="frame" x="69.666666666666686" y="35" width="243" height="21"/>
                                         <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="16"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="R$10000,00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ku-gq-ndr">
-                                        <rect key="frame" x="100.5" y="61" width="142" height="34"/>
+                                        <rect key="frame" x="120" y="61" width="142" height="34"/>
                                         <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Aporte inicial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gu-OM-wyv">
-                                        <rect key="frame" x="16" y="135" width="99.5" height="20.5"/>
+                                        <rect key="frame" x="16.000000000000007" y="135" width="99.666666666666686" height="20.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$10000,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRL-rZ-aJ9">
-                                        <rect key="frame" x="233.5" y="135" width="93.5" height="20.5"/>
+                                        <rect key="frame" x="272.66666666666669" y="135" width="93.333333333333314" height="20.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taxa de  CDI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icG-dY-kLn">
-                                        <rect key="frame" x="16" y="165" width="96" height="20.5"/>
+                                        <rect key="frame" x="16" y="165" width="96" height="20.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="11,45%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qaz-g9-MAY">
-                                        <rect key="frame" x="272.5" y="165" width="54.5" height="20.5"/>
+                                        <rect key="frame" x="311.66666666666669" y="165" width="54.333333333333314" height="20.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Porcentagem CDB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzl-vM-r56">
-                                        <rect key="frame" x="16" y="195" width="140.5" height="20.5"/>
+                                        <rect key="frame" x="16" y="195" width="140.66666666666666" height="20.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="110%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Owo-fU-3Mp">
-                                        <rect key="frame" x="286.5" y="195" width="40.5" height="20.5"/>
+                                        <rect key="frame" x="325.66666666666669" y="195" width="40.333333333333314" height="20.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -273,6 +274,7 @@ de forma rápida e eficiente e fique mais próximo de realizar seus sonhos.</str
                                 <constraints>
                                     <constraint firstItem="uTa-C3-uoO" firstAttribute="centerX" secondItem="PkV-UU-HLO" secondAttribute="centerX" id="1zE-hw-Hdg"/>
                                     <constraint firstItem="icG-dY-kLn" firstAttribute="leading" secondItem="3gu-OM-wyv" secondAttribute="leading" id="8eI-fL-Ad0"/>
+                                    <constraint firstAttribute="height" constant="350" id="IHF-Hu-BBH"/>
                                     <constraint firstItem="uTa-C3-uoO" firstAttribute="top" secondItem="PkV-UU-HLO" secondAttribute="top" constant="35" id="MyB-T4-ZW0"/>
                                     <constraint firstItem="GRL-rZ-aJ9" firstAttribute="centerY" secondItem="3gu-OM-wyv" secondAttribute="centerY" id="Npt-sh-Zn1"/>
                                     <constraint firstItem="icG-dY-kLn" firstAttribute="bottom" secondItem="3gu-OM-wyv" secondAttribute="bottom" constant="30" id="Qti-GI-6KT"/>
@@ -290,7 +292,7 @@ de forma rápida e eficiente e fique mais próximo de realizar seus sonhos.</str
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wA5-cY-NDD" customClass="CircleView" customModule="calculadorarendafixa" customModuleProvider="target">
-                                <rect key="frame" x="162.5" y="75" width="50" height="50"/>
+                                <rect key="frame" x="182" y="119" width="50" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="5Ix-TL-LWt"/>
@@ -298,9 +300,9 @@ de forma rápida e eficiente e fique mais próximo de realizar seus sonhos.</str
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIB-uv-fFn">
-                                <rect key="frame" x="16" y="591" width="343" height="56"/>
+                                <rect key="frame" x="16" y="786" width="382" height="56"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="cds-WY-7cz"/>
+                                    <constraint firstAttribute="height" constant="56" id="l88-Au-exz"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Nova Simulacao">
@@ -316,17 +318,16 @@ de forma rápida e eficiente e fique mais próximo de realizar seus sonhos.</str
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PkV-UU-HLO" firstAttribute="leading" secondItem="ogy-E6-tyM" secondAttribute="leading" constant="16" id="02N-SC-hzT"/>
+                            <constraint firstItem="ogy-E6-tyM" firstAttribute="trailing" secondItem="uIB-uv-fFn" secondAttribute="trailing" constant="16" id="0Ke-3Z-1nP"/>
                             <constraint firstItem="ogy-E6-tyM" firstAttribute="trailing" secondItem="PkV-UU-HLO" secondAttribute="trailing" constant="16" id="5Mf-qi-nYd"/>
+                            <constraint firstItem="ogy-E6-tyM" firstAttribute="bottom" secondItem="uIB-uv-fFn" secondAttribute="bottom" constant="20" id="6VF-Ga-vwz"/>
                             <constraint firstItem="0iF-Se-SCp" firstAttribute="trailing" secondItem="ogy-E6-tyM" secondAttribute="trailing" constant="16" id="If2-hK-INh"/>
                             <constraint firstItem="PkV-UU-HLO" firstAttribute="top" secondItem="ogy-E6-tyM" secondAttribute="top" constant="100" id="J1C-Zv-QvZ"/>
-                            <constraint firstAttribute="bottom" secondItem="uIB-uv-fFn" secondAttribute="bottom" constant="20" id="K5c-Jn-sHO"/>
                             <constraint firstItem="wA5-cY-NDD" firstAttribute="top" secondItem="PkV-UU-HLO" secondAttribute="top" constant="-25" id="Sip-B8-VGH"/>
-                            <constraint firstAttribute="trailing" secondItem="uIB-uv-fFn" secondAttribute="trailing" constant="16" id="U1e-Nq-5we"/>
                             <constraint firstItem="0iF-Se-SCp" firstAttribute="top" secondItem="ogy-E6-tyM" secondAttribute="top" id="WyZ-du-rJo"/>
+                            <constraint firstItem="uIB-uv-fFn" firstAttribute="leading" secondItem="ogy-E6-tyM" secondAttribute="leading" constant="16" id="bl3-v3-4Vo"/>
                             <constraint firstItem="0iF-Se-SCp" firstAttribute="leading" secondItem="ogy-E6-tyM" secondAttribute="leading" constant="16" id="c1L-eQ-5Sh"/>
                             <constraint firstItem="wA5-cY-NDD" firstAttribute="centerX" secondItem="PkV-UU-HLO" secondAttribute="centerX" id="dE0-cv-YPR"/>
-                            <constraint firstItem="uIB-uv-fFn" firstAttribute="top" secondItem="PkV-UU-HLO" secondAttribute="bottom" constant="50" id="pwo-q0-zpB"/>
-                            <constraint firstItem="uIB-uv-fFn" firstAttribute="leading" secondItem="Djh-oe-IZi" secondAttribute="leading" constant="16" id="qoV-Ym-A8Z"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rhl-wo-YCv"/>
@@ -334,11 +335,15 @@ de forma rápida e eficiente e fique mais próximo de realizar seus sonhos.</str
                     <connections>
                         <outlet property="pageControl" destination="0iF-Se-SCp" id="UFT-vd-gZ5"/>
                         <outlet property="tornPaperCardView" destination="PkV-UU-HLO" id="4qy-iG-byG"/>
+                        <outlet property="txtPercCDB" destination="Owo-fU-3Mp" id="d1Y-yk-9SU"/>
+                        <outlet property="txtPercDCI" destination="Qaz-g9-MAY" id="uvJ-uJ-fOb"/>
+                        <outlet property="txtValorBruto" destination="4ku-gq-ndr" id="hJo-EL-zRa"/>
+                        <outlet property="txtValorInvestido" destination="GRL-rZ-aJ9" id="1hx-6y-37N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ne8-zU-HDl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1764" y="67.916041979010501"/>
+            <point key="canvasLocation" x="1763.7681159420292" y="67.633928571428569"/>
         </scene>
     </scenes>
     <resources>

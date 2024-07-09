@@ -13,10 +13,10 @@ class ResultadoController: UIViewController {
     var simulacaoParaExibir: SimulacaoInvestimento!
     @IBOutlet weak var tornPaperCardView: TornPaperCardView!
     @IBOutlet weak var pageControl: CustomPageControl!
-    @IBOutlet weak var txtValorBruto: CustomTextView!
-    @IBOutlet weak var txtPercCDB: CustomTextView!
-    @IBOutlet weak var txtPercDCI: CustomTextView!
-    @IBOutlet weak var txtValorInvestido: CustomTextView!
+    @IBOutlet weak var txtValorBruto: UILabel!
+    @IBOutlet weak var txtPercCDB: UILabel!
+    @IBOutlet weak var txtPercDCI: UILabel!
+    @IBOutlet weak var txtValorInvestido: UILabel!
     @IBAction func reiniciarCalculo(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
     }
@@ -25,21 +25,18 @@ class ResultadoController: UIViewController {
         // Do any additional setup after loading the view.
         setupCardContent()
         configureView()
-        /*txtValorInvestido.setLabelText("Seu aporte inicial da simulação foi de:")
-        txtValorInvestido.setTextFieldText("R$ \(simulacaoParaExibir.ValorInvestido)")
-        txtValorInvestido.enableTextField(false)
         
-        txtPercDCI.setLabelText("Com a taxa de CDI de:")
-        txtPercDCI.setTextFieldText(" \(simulacaoParaExibir.PercCdi)%")
-        txtPercDCI.enableTextField(false)
+        let valorInvestido = String(format: "%.2f", simulacaoParaExibir.ValorInvestido)
+        txtValorInvestido.text = "R$ \(valorInvestido)"
         
-        txtPercCDB.setLabelText("e porcentagem de CDB de:")
-        txtPercCDB.setTextFieldText(" \(simulacaoParaExibir.PercCdb)%")
-        txtPercCDB.enableTextField(false)
+        let percCdi = String(format: "%.2f", simulacaoParaExibir.PercCdi)
+        txtPercDCI.text = " \(percCdi)%"
         
-        txtValorBruto.setLabelText("Seu rendimento BRUTO será de:")
-        txtValorBruto.setTextFieldText("R$ \(simulacaoParaExibir.ValorRendimentoBruto)")
-        txtValorBruto.enableTextField(false)*/
+        let percCdb = String(format: "%.2f", simulacaoParaExibir.PercCdb)
+        txtPercCDB.text = " \(percCdb)%"
+        
+        let valorBruto = String(format: "%.2f", simulacaoParaExibir.ValorRendimentoBruto)
+        txtValorBruto.text = "R$ \(valorBruto)"
     }
     // MARK: - Configuration Methods
     private func configureView() {

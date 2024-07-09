@@ -49,6 +49,17 @@ class CustomTextView: UIView, UITextFieldDelegate {
     }
 
     private func layoutLabelsAndTextField() {
+        
+        // Configurar fonte, tamanho e peso
+                let baseTitleSize: CGFloat = 17.0
+                let systemBoldFont = UIFont.systemFont(ofSize: baseTitleSize, weight: .bold)
+                
+                // Configurar Dynamic Type para a fonte
+                let fonteTitle = UIFontMetrics(forTextStyle: .body).scaledFont(for: systemBoldFont)
+                
+                // Ajustar fonte para o Content Size Category
+        lblTitle.adjustsFontForContentSizeCategory = true
+        
         lblTitle.frame = CGRect(x: 10, y: 10, width: bounds.width - 20, height: 15)
         lblTitle.font = UIFont.systemFont(ofSize: 10)
         

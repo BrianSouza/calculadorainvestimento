@@ -44,8 +44,9 @@ class CalculoViewController: UIViewController {
 
         pageControl.numberOfPages = 2
         pageControl.currentPage = 0
+        
     }
-
+   
     private func setupLayout() {
         ctInvestimento.setLabelText("Valor Investimento")
         ctInvestimento.setKeyboardType(.decimalPad)
@@ -70,7 +71,7 @@ class CalculoViewController: UIViewController {
                 let results = try await _cdiService.fetchFinanceData()
                 await MainActor.run {
                     if let cdiConsultado = results.first {
-                        cdiText.setTextFieldText(String(cdiConsultado.cdiDaily))
+                        cdiText.setTextFieldText(String(format: "%.2f", cdiConsultado.cdiDaily))
                     } else {
                         cdiText.setTextFieldText("0.00")
                     }

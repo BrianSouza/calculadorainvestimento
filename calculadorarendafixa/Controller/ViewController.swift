@@ -10,6 +10,8 @@ import UIKit
 class ViewController: UIViewController {
 
    
+    @IBOutlet weak var r: UILabel!
+    @IBOutlet weak var lbCalcule: UILabel!
     @IBAction func prepareForUnwind(segue: UIStoryboard)
     {
         self.navigationController?.popToRootViewController(animated: false)
@@ -17,9 +19,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setFont()
     }
 
-
+func setFont()
+    {
+        // Configurar Dynamic Type
+        r.font = UIFont.preferredFont(forTextStyle: .title1)
+        r.adjustsFontForContentSizeCategory = true
+                
+        lbCalcule.font = UIFont.preferredFont(forTextStyle: .body)
+        lbCalcule.adjustsFontForContentSizeCategory = true
+    }
 }
 
